@@ -1,0 +1,13 @@
+---
+const {isRed = false} = Astro.props;
+---
+<div class="bg-blue-500 h-8 cursor-pointer items-center space-x-1 text-white inline-flex px-2 rounded hover:bg-blue-600 " class:list={{"bg-red-500 hover:bg-red-600":isRed}}>
+    <slot name="start-icon"/>
+    <slot name="text">
+    Soy un boton
+    </slot>
+    <slot name="end-icon">
+
+    </slot>
+</div>
+<!-- Si pones a no es necesario poner cursor pointer hacer eso en proyecto -->
